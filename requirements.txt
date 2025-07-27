@@ -1,0 +1,7 @@
+pdfplumber==0.10.3
+scikit-learn==1.4.0
+numpy==1.26.2
+nltk==3.8.1
+python-dateutil==2.8.2
+PyPDF2==3.0.1
+pymupdf
