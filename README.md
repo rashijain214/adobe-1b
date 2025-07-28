@@ -74,7 +74,7 @@ adobe-1b/
 │   ├── extractor.py
 │   └── ranker.py
 ├── main.py                        # Main script entry
-└── requirements.txt               # Python dependencies ```
+└── requirements.txt               # Python dependencies
 
 
     
