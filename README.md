@@ -98,6 +98,8 @@ pip install -r requirements.txt
 #### Build the Docker image
 ```
 sudo docker build -t challenge-analyzer:latest .
+> Note: The `sudo` prefix may be required on personal systems, but is not necessary in Adobe's evaluation environment.
+
 ```
 
 #### Run analysis (replace Collection_2 with Collection_1, Collection_3, or Collection_4)
@@ -107,6 +109,8 @@ sudo docker build -t challenge-analyzer:latest .
   --network none \
   challenge-analyzer:latest \
   --collection /app/input
+> Note: The `sudo` prefix may be required on personal systems, but is not necessary in Adobe's evaluation environment.
+
 ```
 
 ## Run Locally (Without Docker)
