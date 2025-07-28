@@ -96,7 +96,9 @@ pip install -r requirements.txt
 
 ## Docker Image Instructions
 Build the Docker image
-```sudo docker build -t challenge-analyzer:latest .```
+```
+sudo docker build -t challenge-analyzer:latest .
+```
 
 Run analysis (replace Collection_2 with Collection_1, Collection_3, or Collection_4)
 ```sudo docker run --rm \
@@ -105,4 +107,10 @@ Run analysis (replace Collection_2 with Collection_1, Collection_3, or Collectio
   --network none \
   challenge-analyzer:latest \
   --collection /app/input
+```
+
+## Run Locally (Without Docker)
+Run the analysis script locally(Replace Collection_1 with Collection_2, Collection_3, or Collection_4 as needed)
+```
+python main.py --collection Collection_1
 ```
