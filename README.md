@@ -103,13 +103,14 @@ sudo docker build -t challenge-analyzer:latest .
 ```
 
 #### Run analysis (replace Collection_2 with Collection_1, Collection_3, or Collection_4)
-```sudo docker run --rm \
+```
+sudo docker run --rm \
   -v $(pwd)/Collection_2:/app/input \
   -v $(pwd)/output:/app/output \
   --network none \
   challenge-analyzer:latest \
   --collection /app/input
-> Note: The `sudo` prefix may be required on personal systems, but is not necessary in Adobe's evaluation environment.
+> Note: The `sudo` prefix may be required on personal systems, but is not necessary in Adobe's evaluation environment.Can run without sudo too
 
 ```
 
