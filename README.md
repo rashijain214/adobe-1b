@@ -157,4 +157,121 @@ python main.py --collection Collection_1
     }
   ]
 }
+
+
+
+extracting, chunking, ranking, and building JSON output from PDF documents for some job-specific information retrieval or summarization task.
+📄 extractor.py — PDF Text + Title Extraction
+
+Purpose: Extracts text and title information from each page of PDFs.
+
+Key Functions:
+
+    extract_text_from_pdfs(pdf_dir, input_documents):
+
+        Loops through PDFs and reads each page using PyMuPDF.
+
+        Extracts both:
+
+            Full text content.
+
+            Titles (determined heuristically based on font size, boldness, position, etc.).
+
+        Returns a list of pages, each with:
+
+            "document", "page_number", "text", "title".
+
+    find_best_title(text_spans):
+
+        Heuristically finds the most likely section/page title from text spans on a page.
+
+📄 chunker.py — Text Chunking
+
+Purpose: Splits extracted page text into smaller, more manageable chunks for later ranking.
+
+Functions:
+
+    chunk_text(pages):
+
+        Splits each page's text into sentence-based blocks.
+
+        Keeps chunks over 100 characters.
+
+    chunk_text_advanced(pages):
+
+        Smarter chunking by splitting text into paragraphs.
+
+        Ensures each chunk is under ~1000 characters.
+
+        Handles long sections with (Part 1), (Part 2), etc.
+
+📄 ranker.py — Relevance Ranking
+
+Purpose: Ranks text chunks or sections by how relevant they are to a job description or task.
+
+Functions:
+
+    rank_chunks(chunks, job_description, persona, job_to_be_done):
+
+        Ranks individual chunks using TF-IDF + cosine similarity.
+
+        Takes into account the persona’s role and task context.
+
+        Boosts relevance for pages early in the document.
+
+        Returns:
+
+            top_chunks: Top 5 most relevant.
+
+            refined_texts: Cleaned summaries (first ~800 characters, trimmed to full sentence).
+
+    rank_chunks_with_sections(chunks, job_description):
+
+        Instead of individual chunks, ranks aggregated sections by title + document.
+
+        Scores combined text per section.
+
+        Same TF-IDF-based approach.
+
+    trim_to_sentence(text, limit=800):
+
+        Ensures returned summaries don’t cut off mid-sentence, respecting character limit.
+
+    normalize_scores(scores):
+
+        Normalizes similarity scores for fair comparison.
+
+📄 builder.py — Final Output JSON Builder
+
+Purpose: Packages everything into a structured JSON format.
+
+Function:
+
+    build_output_json(...):
+
+        Takes in:
+
+            Metadata (input_documents, persona, job_to_be_done, timestamp).
+
+            ranked_sections: Top-ranked chunks or sections.
+
+            refined_texts: Trimmed relevant content.
+
+        Returns:
+
+            metadata block.
+
+            extracted_sections: Document/Title/Page/Rank.
+
+            subsection_analysis: Refined, short summaries of top sections.
+
+📦 End-to-End Pipeline
+
+    extractor.py: Reads PDFs → gets pages with text and title.
+
+    chunker.py: Breaks pages into smaller chunks.
+
+    ranker.py: Scores and ranks chunks by relevance to the job/task.
+
+    builder.py: Assembles everything into final output JSON.
 ```
