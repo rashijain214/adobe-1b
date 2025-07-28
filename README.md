@@ -17,7 +17,7 @@ An advanced PDF analysis solution designed to process multiple document collecti
 ## 🛠 Tech Stack
 
 - **Language**: Python 3.x
-- **Libraries**: PyMuPDF / PDFMiner
+- **Libraries**: PyMuPDF / PyTorch / Sentence Transformers / Hugging Face / scikit-learn
 
 
 ## 🚀 Installation
