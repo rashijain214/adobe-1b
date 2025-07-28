@@ -95,12 +95,12 @@ pip install -r requirements.txt
 
 
 ## Docker Image Instructions
-Build the Docker image
+#### Build the Docker image
 ```
 sudo docker build -t challenge-analyzer:latest .
 ```
 
-Run analysis (replace Collection_2 with Collection_1, Collection_3, or Collection_4)
+#### Run analysis (replace Collection_2 with Collection_1, Collection_3, or Collection_4)
 ```sudo docker run --rm \
   -v $(pwd)/Collection_2:/app/input \
   -v $(pwd)/output:/app/output \
@@ -113,4 +113,44 @@ Run analysis (replace Collection_2 with Collection_1, Collection_3, or Collectio
 Run the analysis script locally(Replace Collection_1 with Collection_2, Collection_3, or Collection_4 as needed)
 ```
 python main.py --collection Collection_1
+```
+
+## Input/Output Format
+#### Input JSON Structure
+```
+{
+  "challenge_info": {
+    "challenge_id": "round_1b_XXX",
+    "test_case_name": "specific_test_case"
+  },
+  "documents": [{"filename": "doc.pdf", "title": "Title"}],
+  "persona": {"role": "User Persona"},
+  "job_to_be_done": {"task": "Use case description"}
+}
+```
+
+#### Output JSON Structure
+```
+{
+  "metadata": {
+    "input_documents": ["list"],
+    "persona": "User Persona",
+    "job_to_be_done": "Task description"
+  },
+  "extracted_sections": [
+    {
+      "document": "source.pdf",
+      "section_title": "Title",
+      "importance_rank": 1,
+      "page_number": 1
+    }
+  ],
+  "subsection_analysis": [
+    {
+      "document": "source.pdf",
+      "refined_text": "Content",
+      "page_number": 1
+    }
+  ]
+}
 ```
