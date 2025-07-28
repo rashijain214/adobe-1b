@@ -157,11 +157,12 @@ python main.py --collection Collection_1
     }
   ]
 }
+```
 
 
 
-extracting, chunking, ranking, and building JSON output from PDF documents for some job-specific information retrieval or summarization task.
-📄 extractor.py — PDF Text + Title Extraction
+### Files
+**1. extractor.py — PDF Text + Title Extraction**
 
 Purpose: Extracts text and title information from each page of PDFs.
 
@@ -185,7 +186,7 @@ Key Functions:
 
         Heuristically finds the most likely section/page title from text spans on a page.
 
-📄 chunker.py — Text Chunking
+**2. chunker.py — Text Chunking**
 
 Purpose: Splits extracted page text into smaller, more manageable chunks for later ranking.
 
@@ -205,7 +206,7 @@ Functions:
 
         Handles long sections with (Part 1), (Part 2), etc.
 
-📄 ranker.py — Relevance Ranking
+**3. ranker.py — Relevance Ranking**
 
 Purpose: Ranks text chunks or sections by how relevant they are to a job description or task.
 
@@ -241,7 +242,7 @@ Functions:
 
         Normalizes similarity scores for fair comparison.
 
-📄 builder.py — Final Output JSON Builder
+**4. builder.py — Final Output JSON Builder**
 
 Purpose: Packages everything into a structured JSON format.
 
@@ -265,13 +266,9 @@ Function:
 
             subsection_analysis: Refined, short summaries of top sections.
 
-📦 End-to-End Pipeline
+ #### End-to-End Pipeline
+- extractor.py: Reads PDFs → gets pages with text and title.
+ - chunker.py: Breaks pages into smaller chunks.
+ - ranker.py: Scores and ranks chunks by relevance to the job/task.
+ - builder.py: Assembles everything into final output JSON.
 
-    extractor.py: Reads PDFs → gets pages with text and title.
-
-    chunker.py: Breaks pages into smaller chunks.
-
-    ranker.py: Scores and ranks chunks by relevance to the job/task.
-
-    builder.py: Assembles everything into final output JSON.
-```
