@@ -92,3 +92,17 @@ source venv/bin/activate  # or venv\Scripts\activate on Windows
 # Install dependencies
 pip install -r requirements.txt
 ```
+
+
+## Docker Image Instructions
+Build the Docker image
+```sudo docker build -t challenge-analyzer:latest .```
+
+Run analysis (replace Collection_2 with Collection_1, Collection_3, or Collection_4)
+```sudo docker run --rm \
+  -v $(pwd)/Collection_2:/app/input \
+  -v $(pwd)/output:/app/output \
+  --network none \
+  challenge-analyzer:latest \
+  --collection /app/input
+```
