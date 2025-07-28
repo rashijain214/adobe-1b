@@ -7,11 +7,11 @@ An advanced PDF analysis solution designed to process multiple document collecti
 
 ##  Features
 
-- 📁 **Multi-Collection Handling**: Efficiently ingests and manages multiple sets of PDFs.
-- 🧠 **Persona-Based Filtering**: Extracts content aligned with user-defined personas and specific roles.
-- 🔍 **Use-Case Driven Parsing**: Prioritizes and highlights information relevant to selected scenarios or objectives.
-- ⚙️ **Extensible Pipeline**: Modular design enables plugging in custom NLP models, heuristics, or filters.
-- 📊 **Summarization & Insights**: Generates concise summaries and key insights for each persona-use-case pair.
+-  **Multi-Collection Handling**: Efficiently ingests and manages multiple sets of PDFs.
+-  **Persona-Based Filtering**: Extracts content aligned with user-defined personas and specific roles.
+-  **Use-Case Driven Parsing**: Prioritizes and highlights information relevant to selected scenarios or objectives.
+-  **Extensible Pipeline**: Modular design enables plugging in custom NLP models, heuristics, or filters.
+-  **Summarization & Insights**: Generates concise summaries and key insights for each persona-use-case pair.
 
 
 ##  Tech Stack
