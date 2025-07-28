@@ -22,7 +22,7 @@ An advanced PDF analysis solution designed to process multiple document collecti
 ## Project File Structure
 ```
 adobe-1b/
-├── Collection_1/                  # 🧳 Travel Planning
+├── Collection_1/                  #  Travel Planning
 │   ├── PDFs/
 │   │   ├── South of France - Cities.pdf
 │   │   ├── South of France - Cuisine.pdf
@@ -33,7 +33,7 @@ adobe-1b/
 │   │   └── South of France - Traditions and Culture.pdf
 │   ├── challenge1b_input.json
 │   └── challenge1b_output.json
-├── Collection_2/                  # 📘 Adobe Acrobat Learning
+├── Collection_2/                  #  Adobe Acrobat Learning
 │   ├── PDFs/
 │   │   ├── Learn Acrobat - Create and Convert_1.pdf
 │   │   ├── Learn Acrobat - Create and Convert_2.pdf
@@ -52,7 +52,7 @@ adobe-1b/
 │   │   └── The Ultimate PDF Sharing Checklist.pdf
 │   ├── challenge1b_input.json
 │   └── challenge1b_output.json
-├── Collection_3/                  # 🍽️ Recipe Collection
+├── Collection_3/                  #  Recipe Collection
 │   ├── PDFs/
 │   │   ├── Breakfast Ideas.pdf
 │   │   ├── Dinner Ideas - Mains_1.pdf
