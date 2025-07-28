@@ -1,0 +1,72 @@
+{
+  "metadata": {
+    "input_documents": [
+      "Recent_Developments_GNN_Drug_Discovery_2025_arxiv.pdf",
+      "GNNs_Modern_AI_aided_Drug_Discovery_2025_arxiv.pdf",
+      "Molecule_Generation_Graph_Learning_2022_arxiv.pdf",
+      "RetroGNN_Retrosynthesis_GNN_DeNovo_Design_2020_arxiv.pdf"
+    ],
+    "persona": "PhD Researcher in Computational Biology",
+    "job_to_be_done": "Prepare a comprehensive literature review focusing on methodologies, datasets, and performance benchmarks in GNN\u2011based drug discovery, based on freely accessible scientific papers.",
+    "processing_timestamp": "2025-07-28T03:46:05.765312"
+  },
+  "extracted_sections": [
+    {
+      "document": "Recent_Developments_GNN_Drug_Discovery_2025_arxiv.pdf",
+      "section_title": "Untitled Section",
+      "importance_rank": 1,
+      "page_number": 16
+    },
+    {
+      "document": "RetroGNN_Retrosynthesis_GNN_DeNovo_Design_2020_arxiv.pdf",
+      "section_title": "Untitled Section",
+      "importance_rank": 2,
+      "page_number": 13
+    },
+    {
+      "document": "Recent_Developments_GNN_Drug_Discovery_2025_arxiv.pdf",
+      "section_title": "Untitled Section",
+      "importance_rank": 3,
+      "page_number": 1
+    },
+    {
+      "document": "Recent_Developments_GNN_Drug_Discovery_2025_arxiv.pdf",
+      "section_title": "Untitled Section",
+      "importance_rank": 4,
+      "page_number": 14
+    },
+    {
+      "document": "RetroGNN_Retrosynthesis_GNN_DeNovo_Design_2020_arxiv.pdf",
+      "section_title": "Untitled Section",
+      "importance_rank": 5,
+      "page_number": 2
+    }
+  ],
+  "subsection_analysis": [
+    {
+      "document": "Recent_Developments_GNN_Drug_Discovery_2025_arxiv.pdf",
+      "refined_text": "DrugBank [113] is a comprehensive, freely accessible, online database containing reliable information\non drugs and drug target and is a vital resource for computational drug discovery and pharmaceutical re-\nsearch.",
+      "page_number": 16
+    },
+    {
+      "document": "RetroGNN_Retrosynthesis_GNN_DeNovo_Design_2020_arxiv.pdf",
+      "refined_text": "Artificial intelligence in drug discovery: a comprehensive review of data-driven and machine\nlearning approaches.",
+      "page_number": 13
+    },
+    {
+      "document": "Recent_Developments_GNN_Drug_Discovery_2025_arxiv.pdf",
+      "refined_text": "Existing literature provides\nsome comprehensive reviews on deep learning approaches in drug discovery [2, 3, 4, 5].",
+      "page_number": 1
+    },
+    {
+      "document": "Recent_Developments_GNN_Drug_Discovery_2025_arxiv.pdf",
+      "refined_text": "Finally, for easy reference, all the approaches discussed in this review for all the three tasks are organized\nin Table 1.\n6 Benchmark Databases\nIn addition to newly developed methodologies, benchmark datasets play a vital role in advancing the field of\ncomputational drug discovery.",
+      "page_number": 14
+    },
+    {
+      "document": "RetroGNN_Retrosynthesis_GNN_DeNovo_Design_2020_arxiv.pdf",
+      "refined_text": "In this survey, we provide a comprehensive review of the latest graph-based methods for molecule\ngeneration and optimization.",
+      "page_number": 2
+    }
+  ]
+}
