@@ -19,6 +19,8 @@ An advanced PDF analysis solution designed to process multiple document collecti
 - **Language**: Python 3.x
 - **Libraries**: PyMuPDF / PyTorch / Sentence Transformers / Hugging Face / scikit-learn
 
+## Project File Structure
+```
 adobe-1b/
 ├── Collection_1/                  # 🧳 Travel Planning
 │   ├── PDFs/
@@ -72,7 +74,8 @@ adobe-1b/
 │   ├── extractor.py
 │   └── ranker.py
 ├── main.py                        # Main script entry
-└── requirements.txt              # Python dependencies
+└── requirements.txt               # Python dependencies ```
+
 
     
 ## 🚀 Installation
